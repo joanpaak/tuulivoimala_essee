@@ -4,7 +4,7 @@
 # ANALYSIS 1:
 #
 # Proportions of participants reporting symptoms during the experiment.
-# 6 out of 11, who reporting getting symptoms from (infra)sounds emitted from wind turbines, reported symptoms. 
+# 6 out of 11, who reporting getting symptoms from (infra)sounds emitted from wind turbines, reported symptoms.
 # 2 out of 16, who reported NOT getting symptoms from (infra)sounds emitted from wind turbines, reported symptoms. 
 #
 # Thus:
@@ -38,9 +38,10 @@ points(qs[c(2,3)], c(0, 0), lwd = 15, type = "l", lend = 1)
 
 
 # ANALYSIS 2:
-# 
-# 6 people reported symptoms in the condition in which they were told they were exposed to infrasounds. 
-# 5 of them had reported getting symptoms from infrasounds; 1 reported not getting symptoms. 
+# Condition in which the participants were told they were exposed to infrasounds, even though
+# in reality they weren't. 
+# Six people in total reported symptoms. 
+# Five of them had reported getting symptoms from infrasounds; one had reported not getting symptoms. 
 # Thus:
 #
 # P1 = 5/11
