@@ -4,8 +4,8 @@
 # ANALYSIS 1:
 #
 # Proportions of participants reporting symptoms during the experiment.
-# 6 out of 11, who reporting getting symptoms from (infra)sounds emitted from wind turbines, reported symptoms.
-# 2 out of 16, who reported NOT getting symptoms from (infra)sounds emitted from wind turbines, reported symptoms. 
+# 6 out of 11, who had reported getting symptoms from (infra)sounds emitted from wind turbines, reported symptoms.
+# 2 out of 16, who had reported NOT getting symptoms from (infra)sounds emitted from wind turbines, reported symptoms. 
 #
 # Thus:
 # P1 = 6/11
