@@ -45,8 +45,9 @@ points(qs[c(2,3)], c(0, 0), lwd = 15, type = "l", lend = 1)
 #
 # P1 = 5/11
 # P2 = 1/16
-
-
+#
+# Prior is again Beta(1, 1)
+#
 
 curve(dbeta(x, 1 + 5, 1 + 11 - 5), ylim = c(0, 7.0), axes = F,
       ylab = "Tiheys", xlab = "P(Raportoi oireen)")
