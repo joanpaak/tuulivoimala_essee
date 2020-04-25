@@ -1,4 +1,8 @@
-
+# ALL DATA IS FROM PAGE 7 of the Policy Brief report
+#
+#
+# ANALYSIS 1:
+#
 # Proportions of participants reporting symptoms during the experiment.
 # 6 out of 11, who reporting getting symptoms from (infra)sounds emitted from wind turbines, reported symptoms. 
 # 2 out of 16, who reported NOT getting symptoms from (infra)sounds emitted from wind turbines, reported symptoms. 
@@ -24,9 +28,38 @@ y2_s = rbeta(1e6, 1 + 2, 1 + 16 - 2)
 
 diff = y1_s - y2_s
 
+# Plot the approximated distribution:
+
 hist(diff, prob = T, ylab = "Tiheys",
      xlab = "Ero ryhmien välillä", main = "", breaks = seq(-1, 1, 0.05))
 qs = quantile(y1_s - y2_s, c(0.025, 0.25, 0.75, 0.975))
 points(qs[c(1,4)], c(0, 0), lwd = 8, type = "l", lend = 1)
 points(qs[c(2,3)], c(0, 0), lwd = 15, type = "l", lend = 1)
 
+
+# ANALYSIS 2:
+# 
+# 6 people reported symptoms in the condition in which they were told they were exposed to infrasounds. 
+# 5 of them had reported getting symptoms from infrasounds; 1 reported not getting symptoms. 
+# Thus:
+#
+# P1 = 5/11
+# P2 = 1/16
+
+
+
+curve(dbeta(x, 1 + 5, 1 + 11 - 5), ylim = c(0, 7.0), axes = F,
+      ylab = "Tiheys", xlab = "P(Raportoi oireen)")
+curve(dbeta(x, 1 + 1, 1 + 16 - 1), add = T, lty = 2)
+axis(side = 1); axis(side = 2)
+
+y1_s = rbeta(1e6, 1 + 5, 1 + 11 - 5)
+y2_s = rbeta(1e6, 1 + 1, 1 + 16 - 1)
+
+diff = y1_s - y2_s
+
+hist(diff, prob = T, ylab = "Tiheys",
+     xlab = "Ero ryhmien välillä", main = "", breaks = seq(-0.5, 1, 0.05))
+qs = quantile(y1_s - y2_s, c(0.025, 0.25, 0.75, 0.975))
+points(qs[c(1,4)], c(0, 0), lwd = 8, type = "l", lend = 1)
+points(qs[c(2,3)], c(0, 0), lwd = 15, type = "l", lend = 1)
