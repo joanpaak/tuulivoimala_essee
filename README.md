@@ -4,4 +4,4 @@ Maijala, P., Turunen, A., Kurki, I., Vainio, L. & Sainio, M. (2020):  Tuulivoima
 Published online at https://tietokayttoon.fi/julkaisu?pubid=34903
 
 Posterior probability distributions are computed for the proportions of participants reporting symptoms. 
-All code is in R, all labels are in Finnsh. 
+All code is in R, all labels are in Finnsh. Just copy/paste the code from the file into R and you should be golden.
