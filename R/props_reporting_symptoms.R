@@ -61,7 +61,7 @@ y2_2 = rbeta(1e6, 1 + 1, 1 + 16 - 1)
 diff_2 = y1_2 - y2_2
 
 hist(diff, prob = T, ylab = "Tiheys",
-     xlab = "Ero ryhmien välillä", main = "", breaks = seq(-0.5, 1, 0.05))
+     xlab = "Ero ryhmien välillä", main = "", breaks = seq(-1.0, 1, 0.05))
 qs = quantile(diff_2, c(0.025, 0.25, 0.75, 0.975))
 points(qs[c(1,4)], c(0, 0), lwd = 8, type = "l", lend = 1)
 points(qs[c(2,3)], c(0, 0), lwd = 15, type = "l", lend = 1)
