@@ -23,16 +23,16 @@ axis(side = 1); axis(side = 2)
 
 # 2) Use random sampling to approximate difference between distributions:
 
-y1_s = rbeta(1e6, 1 + 6, 1 + 11 - 6)
-y2_s = rbeta(1e6, 1 + 2, 1 + 16 - 2)
+y1_1 = rbeta(1e6, 1 + 6, 1 + 11 - 6)
+y2_1 = rbeta(1e6, 1 + 2, 1 + 16 - 2)
 
-diff = y1_s - y2_s
+diff_1 = y1_1 - y2_1
 
 # Plot the approximated distribution:
 
-hist(diff, prob = T, ylab = "Tiheys",
+hist(diff_1, prob = T, ylab = "Tiheys",
      xlab = "Ero ryhmien välillä", main = "", breaks = seq(-1, 1, 0.05))
-qs = quantile(y1_s - y2_s, c(0.025, 0.25, 0.75, 0.975))
+qs = quantile(diff_1, c(0.025, 0.25, 0.75, 0.975))
 points(qs[c(1,4)], c(0, 0), lwd = 8, type = "l", lend = 1)
 points(qs[c(2,3)], c(0, 0), lwd = 15, type = "l", lend = 1)
 
@@ -55,13 +55,13 @@ curve(dbeta(x, 1 + 5, 1 + 11 - 5), ylim = c(0, 7.0), axes = F,
 curve(dbeta(x, 1 + 1, 1 + 16 - 1), add = T, lty = 2)
 axis(side = 1); axis(side = 2)
 
-y1_s = rbeta(1e6, 1 + 5, 1 + 11 - 5)
-y2_s = rbeta(1e6, 1 + 1, 1 + 16 - 1)
+y1_2 = rbeta(1e6, 1 + 5, 1 + 11 - 5)
+y2_2 = rbeta(1e6, 1 + 1, 1 + 16 - 1)
 
-diff = y1_s - y2_s
+diff_2 = y1_2 - y2_2
 
 hist(diff, prob = T, ylab = "Tiheys",
      xlab = "Ero ryhmien välillä", main = "", breaks = seq(-0.5, 1, 0.05))
-qs = quantile(y1_s - y2_s, c(0.025, 0.25, 0.75, 0.975))
+qs = quantile(diff_2, c(0.025, 0.25, 0.75, 0.975))
 points(qs[c(1,4)], c(0, 0), lwd = 8, type = "l", lend = 1)
 points(qs[c(2,3)], c(0, 0), lwd = 15, type = "l", lend = 1)
